@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Atividade01_Matriz {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        int numlines = 3;
+        int numcolunas = 3;
+        int[][] matriz = new int[numlines][numcolunas];
+
+        System.out.println("Digite os valores da matriz.");
+
+        for (int i = 0; i < numlines; i++) {
+            for (int j = 0; j < numcolunas; j++) {
+                System.out.print("Insira o número " + (i + 1) + ": ");
+                matriz[i][j] = input.nextInt();
+            }
+        }
+
+        System.out.println("\nMatriz preenchida:");
+        //exiba a matriz preenchida 
+        for (int i = 0; i < numlines; i++) {
+            for (int j = 0; j < numcolunas; j++) {
+                System.out.print(matriz[i][j] + "\t"); 
+            }
+            System.out.println(); 
+        }
+
+        // 
+        input.close();
+
+    }
+}
